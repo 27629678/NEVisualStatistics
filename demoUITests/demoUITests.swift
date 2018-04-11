@@ -31,6 +31,24 @@ class demoUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let demoNavigationBar = app.navigationBars["demo"]
+        demoNavigationBar.buttons["add"].tap()
+        demoNavigationBar.buttons["more"].tap()
+        app/*@START_MENU_TOKEN@*/.buttons["998"]/*[[".buttons[\"btn\"]",".buttons[\"998\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Item"].tap()
+        
+        let emptyListTable = app.tables["Empty list"]
+        emptyListTable.swipeDown()
+        emptyListTable.swipeUp()
+        emptyListTable.swipeUp()
+        tabBarsQuery.buttons["demo"].tap()
+        
+        
     }
     
 }

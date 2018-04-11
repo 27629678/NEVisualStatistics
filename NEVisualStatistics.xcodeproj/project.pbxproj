@@ -17,6 +17,8 @@
 		DAC1D27C207D9C92002D1235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC1D27A207D9C92002D1235 /* LaunchScreen.storyboard */; };
 		DAC1D287207D9C92002D1235 /* demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D286207D9C92002D1235 /* demoTests.swift */; };
 		DAC1D292207D9C92002D1235 /* demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D291207D9C92002D1235 /* demoUITests.swift */; };
+		DAC1D2B5207DABE2002D1235 /* NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; };
+		DAC1D2BC207DB422002D1235 /* UIView+VisualStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D2BB207DB422002D1235 /* UIView+VisualStatistics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 		DAC1D28D207D9C92002D1235 /* demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC1D291207D9C92002D1235 /* demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoUITests.swift; sourceTree = "<group>"; };
 		DAC1D293207D9C92002D1235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC1D2BB207DB422002D1235 /* UIView+VisualStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+VisualStatistics.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC1D2B5207DABE2002D1235 /* NEVisualStatistics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 				DAC1D285207D9C92002D1235 /* demoTests */,
 				DAC1D290207D9C92002D1235 /* demoUITests */,
 				DAC1D252207D9C71002D1235 /* Products */,
+				DAC1D2B4207DABE2002D1235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +137,7 @@
 		DAC1D253207D9C71002D1235 /* NEVisualStatistics */ = {
 			isa = PBXGroup;
 			children = (
+				DAC1D2B6207DACB9002D1235 /* UIKit+Category */,
 				DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */,
 				DAC1D255207D9C71002D1235 /* Info.plist */,
 			);
@@ -176,6 +182,21 @@
 				DAC1D293207D9C92002D1235 /* Info.plist */,
 			);
 			path = demoUITests;
+			sourceTree = "<group>";
+		};
+		DAC1D2B4207DABE2002D1235 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAC1D2B6207DACB9002D1235 /* UIKit+Category */ = {
+			isa = PBXGroup;
+			children = (
+				DAC1D2BB207DB422002D1235 /* UIView+VisualStatistics.swift */,
+			);
+			path = "UIKit+Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +314,7 @@
 				TargetAttributes = {
 					DAC1D250207D9C71002D1235 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					DAC1D259207D9C71002D1235 = {
 						CreatedOnToolsVersion = 9.3;
@@ -378,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC1D2BC207DB422002D1235 /* UIView+VisualStatistics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +600,7 @@
 		DAC1D266207D9C71002D1235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -594,6 +618,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatistics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -602,6 +627,7 @@
 		DAC1D267207D9C71002D1235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -627,6 +653,7 @@
 		DAC1D269207D9C71002D1235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = NEVisualStatisticsTests/Info.plist;
@@ -645,6 +672,7 @@
 		DAC1D26A207D9C71002D1235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = NEVisualStatisticsTests/Info.plist;
