@@ -17,9 +17,9 @@ extension UIView {
         get {
             var mask = objc_getAssociatedObject(self, &kStatisticsMaskView) as? UIView
             if mask == nil {
-                mask = UIView(frame: CGRect(x: 0, y: 0,
-                                            width: self.frame.width,
-                                            height: self.frame.height))
+                mask = VSMaskView(frame: CGRect(x: 0, y: 0,
+                                                width: self.frame.width,
+                                                height: self.frame.height))
                 objc_setAssociatedObject(self, &kStatisticsMaskView,
                                          mask, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
@@ -29,6 +29,10 @@ extension UIView {
     }
     
     func showStatisticsMaskView(_ hidden: Bool) -> Void {
+        guard let identifier = (accessibilityIdentifier ?? accessibilityLabel), identifier.count > 0 else {
+            return
+        }
+        
         #if DEBUG
         print("\(type(of: self)).hidden = \(hidden)")
         #endif
