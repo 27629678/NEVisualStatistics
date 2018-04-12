@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721C205617877AEE5A1CE9F8 /* Pods_NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1242044FCBAB3540A4085CBD /* Pods_NEVisualStatistics.framework */; };
+		94299512142A820D87FBF1C9 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8905435D57269B0748E1D861 /* Pods_demo.framework */; };
 		DAC1D25B207D9C71002D1235 /* NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; };
 		DAC1D260207D9C71002D1235 /* NEVisualStatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D25F207D9C71002D1235 /* NEVisualStatisticsTests.swift */; };
 		DAC1D262207D9C71002D1235 /* NEVisualStatistics.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +70,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1242044FCBAB3540A4085CBD /* Pods_NEVisualStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NEVisualStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B10F5644966AC7E35EB7FEB /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		7D56A79FAAE4F3293ECB9C94 /* Pods-NEVisualStatistics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEVisualStatistics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NEVisualStatistics/Pods-NEVisualStatistics.debug.xcconfig"; sourceTree = "<group>"; };
+		8905435D57269B0748E1D861 /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB052C62DB029297770D01B9 /* Pods-NEVisualStatistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEVisualStatistics.release.xcconfig"; path = "Pods/Target Support Files/Pods-NEVisualStatistics/Pods-NEVisualStatistics.release.xcconfig"; sourceTree = "<group>"; };
+		D78202CCF7FD73C877A11275 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NEVisualStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEVisualStatistics.h; sourceTree = "<group>"; };
 		DAC1D255207D9C71002D1235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				721C205617877AEE5A1CE9F8 /* Pods_NEVisualStatistics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC1D2C6207F35C2002D1235 /* NEVisualStatistics.framework in Frameworks */,
+				94299512142A820D87FBF1C9 /* Pods_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +141,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CFD07A5A1F21B1F5C3E2B370 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D56A79FAAE4F3293ECB9C94 /* Pods-NEVisualStatistics.debug.xcconfig */,
+				AB052C62DB029297770D01B9 /* Pods-NEVisualStatistics.release.xcconfig */,
+				4B10F5644966AC7E35EB7FEB /* Pods-demo.debug.xcconfig */,
+				D78202CCF7FD73C877A11275 /* Pods-demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DAC1D247207D9C71002D1235 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +162,7 @@
 				DAC1D290207D9C92002D1235 /* demoUITests */,
 				DAC1D252207D9C71002D1235 /* Products */,
 				DAC1D2B4207DABE2002D1235 /* Frameworks */,
+				CFD07A5A1F21B1F5C3E2B370 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +231,8 @@
 		DAC1D2B4207DABE2002D1235 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1242044FCBAB3540A4085CBD /* Pods_NEVisualStatistics.framework */,
+				8905435D57269B0748E1D861 /* Pods_demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAC1D265207D9C71002D1235 /* Build configuration list for PBXNativeTarget "NEVisualStatistics" */;
 			buildPhases = (
+				69EE51C1806C7B5AD5F5F722 /* [CP] Check Pods Manifest.lock */,
 				DAC1D24C207D9C71002D1235 /* Sources */,
 				DAC1D24D207D9C71002D1235 /* Frameworks */,
 				DAC1D24E207D9C71002D1235 /* Headers */,
@@ -275,10 +300,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAC1D294207D9C92002D1235 /* Build configuration list for PBXNativeTarget "demo" */;
 			buildPhases = (
+				55224C8B41A97AE63CD17315 /* [CP] Check Pods Manifest.lock */,
 				DAC1D26B207D9C8F002D1235 /* Sources */,
 				DAC1D26C207D9C8F002D1235 /* Frameworks */,
 				DAC1D26D207D9C8F002D1235 /* Resources */,
 				DAC1D2CA207F35C2002D1235 /* Embed Frameworks */,
+				36D61B55E8279FCB754EB298 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,6 +445,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36D61B55E8279FCB754EB298 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55224C8B41A97AE63CD17315 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69EE51C1806C7B5AD5F5F722 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NEVisualStatistics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAC1D24C207D9C71002D1235 /* Sources */ = {
@@ -628,6 +712,7 @@
 		};
 		DAC1D266207D9C71002D1235 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D56A79FAAE4F3293ECB9C94 /* Pods-NEVisualStatistics.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -640,11 +725,7 @@
 				INFOPLIST_FILE = NEVisualStatistics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatistics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -656,6 +737,7 @@
 		};
 		DAC1D267207D9C71002D1235 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB052C62DB029297770D01B9 /* Pods-NEVisualStatistics.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -668,11 +750,7 @@
 				INFOPLIST_FILE = NEVisualStatistics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatistics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -688,11 +766,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = NEVisualStatisticsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatisticsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -707,11 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = NEVisualStatisticsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatisticsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -721,6 +791,7 @@
 		};
 		DAC1D295207D9C92002D1235 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B10F5644966AC7E35EB7FEB /* Pods-demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -728,10 +799,7 @@
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.visualstatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -741,6 +809,7 @@
 		};
 		DAC1D296207D9C92002D1235 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D78202CCF7FD73C877A11275 /* Pods-demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -748,10 +817,7 @@
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.visualstatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -767,11 +833,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -788,11 +850,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -808,11 +866,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -828,11 +882,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
