@@ -11,7 +11,7 @@ import SnapKit
 
 private var kStatisticsMaskView: Int = 0
 
-public extension UIView {
+extension UIView {
     
     private var statisticsMaskView: UIView? {
         get {
@@ -29,14 +29,6 @@ public extension UIView {
     }
     
     func showStatisticsMaskView(_ hidden: Bool) -> Void {
-        
-        // omit _UIButtonBarButton class object
-        if #available(iOS 11.0, *) {
-            if self.isKind(of: NSClassFromString("_UIButtonBarButton")!) {
-                return
-            }
-        }
-        
         #if DEBUG
         print("\(type(of: self)).hidden = \(hidden)")
         #endif

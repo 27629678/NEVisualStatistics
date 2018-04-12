@@ -11,6 +11,7 @@ import NEVisualStatistics
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    private var index = 0
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -34,28 +35,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // UINavigationButton
-        // _UIButtonBarButton
-//        handle((navigationController?.view)!)
-        handle((tabBarController?.view)!)
+        schedule()
     }
     
-    private func handle(_ view: UIView) -> Void {
-        if view.subviews.count == 0 {
-            if view.isKind(of: UIControl.self) {
-                view.showStatisticsMaskView(false)
-            }
-            
-            return
+    // MARK: private
+    @objc private func schedule() -> Void {
+        index += 1
+        if index % 2 == 0 {
+            NEVisualStatistics.showMaskView()
+        }
+        else {
+            NEVisualStatistics.hideMaskView()
         }
         
-        for subview in view.subviews {
-            handle(subview)
-        }
-        
-        if view.isKind(of: UIControl.self) {
-            view.showStatisticsMaskView(false)
-        }
+        perform(#selector(schedule), with: nil, afterDelay: 1)
     }
     
     // MARK: delegate

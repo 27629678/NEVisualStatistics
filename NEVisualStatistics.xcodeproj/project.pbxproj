@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		721C205617877AEE5A1CE9F8 /* Pods_NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1242044FCBAB3540A4085CBD /* Pods_NEVisualStatistics.framework */; };
 		94299512142A820D87FBF1C9 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8905435D57269B0748E1D861 /* Pods_demo.framework */; };
+		DA4CBAE3207F533B00A697D5 /* UIViewController+VisualStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4CBAE2207F533B00A697D5 /* UIViewController+VisualStatistics.swift */; };
+		DA4CBAE5207F585200A697D5 /* NEVisualStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4CBAE4207F585200A697D5 /* NEVisualStatistics.swift */; };
 		DAC1D25B207D9C71002D1235 /* NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; };
 		DAC1D260207D9C71002D1235 /* NEVisualStatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D25F207D9C71002D1235 /* NEVisualStatisticsTests.swift */; };
 		DAC1D262207D9C71002D1235 /* NEVisualStatistics.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +78,8 @@
 		8905435D57269B0748E1D861 /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB052C62DB029297770D01B9 /* Pods-NEVisualStatistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEVisualStatistics.release.xcconfig"; path = "Pods/Target Support Files/Pods-NEVisualStatistics/Pods-NEVisualStatistics.release.xcconfig"; sourceTree = "<group>"; };
 		D78202CCF7FD73C877A11275 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
+		DA4CBAE2207F533B00A697D5 /* UIViewController+VisualStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+VisualStatistics.swift"; sourceTree = "<group>"; };
+		DA4CBAE4207F585200A697D5 /* NEVisualStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEVisualStatistics.swift; sourceTree = "<group>"; };
 		DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NEVisualStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEVisualStatistics.h; sourceTree = "<group>"; };
 		DAC1D255207D9C71002D1235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		DAC1D253207D9C71002D1235 /* NEVisualStatistics */ = {
 			isa = PBXGroup;
 			children = (
+				DA4CBAE4207F585200A697D5 /* NEVisualStatistics.swift */,
 				DAC1D2B6207DACB9002D1235 /* UIKit+Category */,
 				DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */,
 				DAC1D255207D9C71002D1235 /* Info.plist */,
@@ -241,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				DAC1D2BB207DB422002D1235 /* UIView+VisualStatistics.swift */,
+				DA4CBAE2207F533B00A697D5 /* UIViewController+VisualStatistics.swift */,
 			);
 			path = "UIKit+Category";
 			sourceTree = "<group>";
@@ -508,7 +514,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4CBAE5207F585200A697D5 /* NEVisualStatistics.swift in Sources */,
 				DAC1D2BC207DB422002D1235 /* UIView+VisualStatistics.swift in Sources */,
+				DA4CBAE3207F533B00A697D5 /* UIViewController+VisualStatistics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +733,11 @@
 				INFOPLIST_FILE = NEVisualStatistics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatistics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -750,7 +762,11 @@
 				INFOPLIST_FILE = NEVisualStatistics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatistics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -766,7 +782,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = NEVisualStatisticsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatisticsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -781,7 +801,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = NEVisualStatisticsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.NEVisualStatisticsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -799,7 +823,10 @@
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.visualstatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -817,7 +844,10 @@
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.visualstatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -833,7 +863,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -850,7 +884,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -866,7 +904,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -882,7 +924,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
