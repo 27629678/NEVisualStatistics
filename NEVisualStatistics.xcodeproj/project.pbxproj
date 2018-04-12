@@ -17,8 +17,9 @@
 		DAC1D27C207D9C92002D1235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC1D27A207D9C92002D1235 /* LaunchScreen.storyboard */; };
 		DAC1D287207D9C92002D1235 /* demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D286207D9C92002D1235 /* demoTests.swift */; };
 		DAC1D292207D9C92002D1235 /* demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D291207D9C92002D1235 /* demoUITests.swift */; };
-		DAC1D2B5207DABE2002D1235 /* NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; };
 		DAC1D2BC207DB422002D1235 /* UIView+VisualStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D2BB207DB422002D1235 /* UIView+VisualStatistics.swift */; };
+		DAC1D2C6207F35C2002D1235 /* NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; };
+		DAC1D2C7207F35C2002D1235 /* NEVisualStatistics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,28 @@
 			remoteGlobalIDString = DAC1D26E207D9C8F002D1235;
 			remoteInfo = demo;
 		};
+		DAC1D2C8207F35C2002D1235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC1D248207D9C71002D1235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC1D250207D9C71002D1235;
+			remoteInfo = NEVisualStatistics;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DAC1D2CA207F35C2002D1235 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DAC1D2C7207F35C2002D1235 /* NEVisualStatistics.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NEVisualStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAC1D2B5207DABE2002D1235 /* NEVisualStatistics.framework in Frameworks */,
+				DAC1D2C6207F35C2002D1235 /* NEVisualStatistics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +278,12 @@
 				DAC1D26B207D9C8F002D1235 /* Sources */,
 				DAC1D26C207D9C8F002D1235 /* Frameworks */,
 				DAC1D26D207D9C8F002D1235 /* Resources */,
+				DAC1D2CA207F35C2002D1235 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DAC1D2C9207F35C2002D1235 /* PBXTargetDependency */,
 			);
 			name = demo;
 			productName = demo;
@@ -455,6 +479,11 @@
 			target = DAC1D26E207D9C8F002D1235 /* demo */;
 			targetProxy = DAC1D28E207D9C92002D1235 /* PBXContainerItemProxy */;
 		};
+		DAC1D2C9207F35C2002D1235 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC1D250207D9C71002D1235 /* NEVisualStatistics */;
+			targetProxy = DAC1D2C8207F35C2002D1235 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -610,6 +639,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NEVisualStatistics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,6 +667,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = NEVisualStatistics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,15 +722,17 @@
 		DAC1D295207D9C92002D1235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xy.visualstatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,15 +742,17 @@
 		DAC1D296207D9C92002D1235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xy.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xy.visualstatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

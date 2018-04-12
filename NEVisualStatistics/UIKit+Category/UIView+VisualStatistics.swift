@@ -28,6 +28,8 @@ public extension UIView {
     }
     
     func showStatisticsMaskView(_ hidden: Bool) -> Void {
+        print("\(type(of: self)).hidden = \(hidden)")
+        
         if hidden {
             statisticsMaskView?.removeFromSuperview()
             return

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="02W-sr-KWI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="02W-sr-KWI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +14,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1GF-7c-Enp"/>
+                        <viewControllerLayoutGuide type="bottom" id="JWb-Ud-Sj0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,14 +51,13 @@
                             <constraint firstItem="4us-Km-HWa" firstAttribute="centerX" secondItem="UHU-KL-SFY" secondAttribute="centerX" id="6tD-zX-oOq"/>
                             <constraint firstItem="7tf-c7-jZb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CZK-se-31x"/>
                             <constraint firstItem="UHU-KL-SFY" firstAttribute="top" secondItem="4us-Km-HWa" secondAttribute="bottom" constant="55" id="YWb-Mv-rta"/>
-                            <constraint firstItem="UHU-KL-SFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="aIK-kj-wwS"/>
+                            <constraint firstItem="UHU-KL-SFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="139" id="aIK-kj-wwS"/>
                             <constraint firstItem="7tf-c7-jZb" firstAttribute="centerX" secondItem="UHU-KL-SFY" secondAttribute="centerX" id="gUK-RI-D4b"/>
                             <constraint firstItem="FvH-P4-JrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l9G-B8-1SH"/>
                             <constraint firstItem="UHU-KL-SFY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nAU-H8-vui"/>
-                            <constraint firstItem="FvH-P4-JrU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="nqZ-fc-YRy"/>
-                            <constraint firstItem="7tf-c7-jZb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ur8-5d-8kK"/>
+                            <constraint firstItem="FvH-P4-JrU" firstAttribute="top" secondItem="1GF-7c-Enp" secondAttribute="bottom" constant="86" id="nqZ-fc-YRy"/>
+                            <constraint firstItem="7tf-c7-jZb" firstAttribute="bottom" secondItem="JWb-Ud-Sj0" secondAttribute="top" id="ur8-5d-8kK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="PEa-x4-Bnu"/>
                     <connections>

@@ -22,6 +22,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationItem.leftBarButtonItem = left
         
         let right = UIBarButtonItem(title: "add", style: .plain, target: nibName, action: nil)
+        right.accessibilityLabel = "right_bar_btn"
+        right.accessibilityIdentifier = "identifier_01"
         navigationItem.rightBarButtonItem = right
         
         tableView.delegate = self
@@ -32,6 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // UINavigationButton
+        // _UIButtonBarButton
 //        handle((navigationController?.view)!)
         handle((tabBarController?.view)!)
     }
@@ -39,7 +43,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private func handle(_ view: UIView) -> Void {
         if view.subviews.count == 0 {
             if view.isKind(of: UIControl.self) {
-                print("did add mask: \(type(of: view))")
                 view.showStatisticsMaskView(false)
             }
             
@@ -51,7 +54,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         if view.isKind(of: UIControl.self) {
-            print("did add mask: \(type(of: view))")
             view.showStatisticsMaskView(false)
         }
     }
