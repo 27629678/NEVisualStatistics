@@ -7,6 +7,7 @@
 //
 
 import ObjectiveC
+import SnapKit
 
 private var kStatisticsMaskView: Int = 0
 
@@ -42,6 +43,9 @@ public extension UIView {
         }
         
         addSubview(statisticsMaskView!)
+        statisticsMaskView?.snp.makeConstraints({ (maker) in
+            maker.edges.equalToSuperview()
+        })
         statisticsMaskView?.backgroundColor = randomBackgroundColor(0.3)
     }
     
