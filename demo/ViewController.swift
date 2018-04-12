@@ -30,6 +30,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "string")
+        
+        if let bar = tabBarController?.tabBar {
+            bar.accessibilityLabel = "first_tab_bar"
+            bar.accessibilityIdentifier = "tab_bar_01"
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

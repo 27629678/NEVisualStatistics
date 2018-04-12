@@ -198,11 +198,13 @@
             </objects>
             <point key="canvasLocation" x="1228" y="-555"/>
         </scene>
-        <!--Item-->
+        <!--Second-->
         <scene sceneID="dxK-be-mX0">
             <objects>
                 <navigationController id="V9z-bo-rHA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3yx-NQ-eDj"/>
+                    <tabBarItem key="tabBarItem" title="Second" badgeValue="2" id="3yx-NQ-eDj">
+                        <color key="badgeColor" red="1" green="0.44182064230000001" blue="0.047806072900000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AIp-Pi-zNu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -215,11 +217,13 @@
             </objects>
             <point key="canvasLocation" x="-862" y="-507"/>
         </scene>
-        <!--Item-->
+        <!--First-->
         <scene sceneID="9Am-ba-PER">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rau-jn-qTw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hiH-ZJ-n8M"/>
+                    <tabBarItem key="tabBarItem" title="First" badgeValue="1" id="hiH-ZJ-n8M">
+                        <color key="badgeColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ia2-de-c8V">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
