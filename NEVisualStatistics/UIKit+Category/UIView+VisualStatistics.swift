@@ -17,9 +17,7 @@ extension UIView {
         get {
             var mask = objc_getAssociatedObject(self, &kStatisticsMaskView) as? UIView
             if mask == nil {
-                mask = VSMaskView(frame: CGRect(x: 0, y: 0,
-                                                width: self.frame.width,
-                                                height: self.frame.height))
+                mask = VSMaskView(frame: CGRect.zero)
                 objc_setAssociatedObject(self, &kStatisticsMaskView,
                                          mask, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }

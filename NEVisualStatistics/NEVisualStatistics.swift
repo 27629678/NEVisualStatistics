@@ -11,11 +11,11 @@ import Foundation
 public class NEVisualStatistics {
     
     public class func showMaskView() -> Void {
-        UIApplication.shared.keyWindow?.rootViewController?.showStatisticsMaskView(hidden: true)
+        UIApplication.shared.keyWindow?.rootViewController?.showStatisticsMaskView(hidden: false)
     }
     
     public class func hideMaskView() -> Void {
-        UIApplication.shared.keyWindow?.rootViewController?.showStatisticsMaskView(hidden: false)
+        UIApplication.shared.keyWindow?.rootViewController?.showStatisticsMaskView(hidden: true)
     }
     
     // MARK: private

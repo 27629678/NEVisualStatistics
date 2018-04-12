@@ -17,7 +17,7 @@ class VSMaskView: UIView {
         
         let btn = UIButton(type: .custom)
         btn.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
-        
+
         addSubview(btn)
         btn.snp.makeConstraints { (maker) in
             maker.edges.equalToSuperview()

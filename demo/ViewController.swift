@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidAppear(animated)
         
         schedule()
+//        NEVisualStatistics.showMaskView()
     }
     
     // MARK: private
