@@ -42,27 +42,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        NEVisualStatistics.showMaskView()
-    }
-    
     // MARK: private
     @objc private func customBtnAction(_ sender: UIButton?) {
-        NEVisualStatistics.hideMaskView()
-    }
-    
-    @objc private func schedule() -> Void {
-        index += 1
-        if index % 2 == 0 {
-            NEVisualStatistics.showMaskView()
-        }
-        else {
-            NEVisualStatistics.hideMaskView()
-        }
         
-        perform(#selector(schedule), with: nil, afterDelay: 1)
     }
     
     // MARK: delegate

@@ -46,7 +46,11 @@ extension UIControl {
             return
         }
         
-        print("event:\(eventID) occured.")
+        NotificationCenter
+            .default
+            .post(name: NSNotification.Name(rawValue: kVisualStatisticsDidReceiveEventNotification),
+                  object: sender,
+                  userInfo: ["event": eventID])
     }
     
 }

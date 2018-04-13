@@ -17,6 +17,8 @@
 		DA67BA8D20803F35002FF825 /* UIView+NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA8C20803F35002FF825 /* UIView+NavigationButton.swift */; };
 		DA67BA8F20803FAB002FF825 /* UIView+EventID.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA8E20803FAB002FF825 /* UIView+EventID.swift */; };
 		DA67BA91208081AE002FF825 /* UIControl+StatisticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA90208081AE002FF825 /* UIControl+StatisticsEvent.swift */; };
+		DA67BA93208089FB002FF825 /* NEWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA92208089FB002FF825 /* NEWindow.swift */; };
+		DA67BA9B20808D04002FF825 /* VSWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA9A20808D04002FF825 /* VSWindow.swift */; };
 		DAC1D25B207D9C71002D1235 /* NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; };
 		DAC1D260207D9C71002D1235 /* NEVisualStatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D25F207D9C71002D1235 /* NEVisualStatisticsTests.swift */; };
 		DAC1D262207D9C71002D1235 /* NEVisualStatistics.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,6 +94,8 @@
 		DA67BA8C20803F35002FF825 /* UIView+NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NavigationButton.swift"; sourceTree = "<group>"; };
 		DA67BA8E20803FAB002FF825 /* UIView+EventID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EventID.swift"; sourceTree = "<group>"; };
 		DA67BA90208081AE002FF825 /* UIControl+StatisticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+StatisticsEvent.swift"; sourceTree = "<group>"; };
+		DA67BA92208089FB002FF825 /* NEWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEWindow.swift; sourceTree = "<group>"; };
+		DA67BA9A20808D04002FF825 /* VSWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSWindow.swift; sourceTree = "<group>"; };
 		DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NEVisualStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEVisualStatistics.h; sourceTree = "<group>"; };
 		DAC1D255207D9C71002D1235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4CBAE4207F585200A697D5 /* NEVisualStatistics.swift */,
+				DA67BA9A20808D04002FF825 /* VSWindow.swift */,
 				DAC1D2B6207DACB9002D1235 /* UIKit+Category */,
 				DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */,
 				DAC1D255207D9C71002D1235 /* Info.plist */,
@@ -228,6 +233,7 @@
 		DAC1D270207D9C8F002D1235 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA67BA92208089FB002FF825 /* NEWindow.swift */,
 				DAC1D271207D9C8F002D1235 /* AppDelegate.swift */,
 				DAC1D273207D9C8F002D1235 /* ViewController.swift */,
 				DAC1D275207D9C8F002D1235 /* Main.storyboard */,
@@ -548,6 +554,7 @@
 				DA4CBAE8207F5D7B00A697D5 /* VSMaskView.swift in Sources */,
 				DA67BA8D20803F35002FF825 /* UIView+NavigationButton.swift in Sources */,
 				DA67BA8B20803E2F002FF825 /* UIView+NavBarButton.swift in Sources */,
+				DA67BA9B20808D04002FF825 /* VSWindow.swift in Sources */,
 				DA67BA8920803D0D002FF825 /* UIView+TabBarButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA67BA93208089FB002FF825 /* NEWindow.swift in Sources */,
 				DAC1D274207D9C8F002D1235 /* ViewController.swift in Sources */,
 				DAC1D272207D9C8F002D1235 /* AppDelegate.swift in Sources */,
 			);
