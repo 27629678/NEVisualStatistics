@@ -9,9 +9,11 @@
 extension UIView {
     var navButtonEventID: String {
         get {
+            guard let actions: [Any] = value(forKey: "targetActions") as? [Any] else { return "" }
+            guard let action = actions.first as? NSObject else { return "" }
+            guard let target = action.value(forKeyPath: "target.barButtonItem") as? UIBarButtonItem else { return "" }
             
-            
-            return "1"
+            return target.accessibilityIdentifier ?? target.accessibilityLabel ?? ""
         }
     }
 }
