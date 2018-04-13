@@ -12,28 +12,7 @@ import SnapKit
 private var kStatisticsMaskView: Int = 0
 
 extension UIView {
-    private var eventID: String {
-        get {
-            var target: String?
-            if isPrivateComponents(self, identifier: &target) {
-                guard let id = target, id.count > 0 else {
-                    return ""
-                }
-                
-                return id
-            }
-            
-            if let target = accessibilityIdentifier, target.count > 0 {
-                return target
-            }
-            
-            if let target = accessibilityLabel, target.count > 0 {
-                return target
-            }
-            
-            return ""
-        }
-    }
+    
     
     private var statisticsMaskView: UIView? {
         get {
@@ -88,17 +67,5 @@ extension UIView {
                        green: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
                        blue: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
                        alpha: CGFloat(alpha))
-    }
-    
-    private func isPrivateComponents(_ view: UIView?, identifier: inout String?) -> Bool {
-        guard let target = view else { return false }
-        
-        if let cls = NSClassFromString("UITabBarButton"), target.isKind(of: cls) {
-            identifier = "1"
-            
-            return true
-        }
-        
-        return false
     }
 }

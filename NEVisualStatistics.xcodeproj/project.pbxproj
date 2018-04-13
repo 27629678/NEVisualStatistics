@@ -12,6 +12,10 @@
 		DA4CBAE3207F533B00A697D5 /* UIViewController+VisualStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4CBAE2207F533B00A697D5 /* UIViewController+VisualStatistics.swift */; };
 		DA4CBAE5207F585200A697D5 /* NEVisualStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4CBAE4207F585200A697D5 /* NEVisualStatistics.swift */; };
 		DA4CBAE8207F5D7B00A697D5 /* VSMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4CBAE7207F5D7B00A697D5 /* VSMaskView.swift */; };
+		DA67BA8920803D0D002FF825 /* UIView+TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA8820803D0D002FF825 /* UIView+TabBarButton.swift */; };
+		DA67BA8B20803E2F002FF825 /* UIView+NavBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA8A20803E2F002FF825 /* UIView+NavBarButton.swift */; };
+		DA67BA8D20803F35002FF825 /* UIView+NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA8C20803F35002FF825 /* UIView+NavigationButton.swift */; };
+		DA67BA8F20803FAB002FF825 /* UIView+EventID.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67BA8E20803FAB002FF825 /* UIView+EventID.swift */; };
 		DAC1D25B207D9C71002D1235 /* NEVisualStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */; };
 		DAC1D260207D9C71002D1235 /* NEVisualStatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1D25F207D9C71002D1235 /* NEVisualStatisticsTests.swift */; };
 		DAC1D262207D9C71002D1235 /* NEVisualStatistics.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,6 +86,10 @@
 		DA4CBAE2207F533B00A697D5 /* UIViewController+VisualStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+VisualStatistics.swift"; sourceTree = "<group>"; };
 		DA4CBAE4207F585200A697D5 /* NEVisualStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEVisualStatistics.swift; sourceTree = "<group>"; };
 		DA4CBAE7207F5D7B00A697D5 /* VSMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSMaskView.swift; sourceTree = "<group>"; };
+		DA67BA8820803D0D002FF825 /* UIView+TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TabBarButton.swift"; sourceTree = "<group>"; };
+		DA67BA8A20803E2F002FF825 /* UIView+NavBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NavBarButton.swift"; sourceTree = "<group>"; };
+		DA67BA8C20803F35002FF825 /* UIView+NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NavigationButton.swift"; sourceTree = "<group>"; };
+		DA67BA8E20803FAB002FF825 /* UIView+EventID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EventID.swift"; sourceTree = "<group>"; };
 		DAC1D251207D9C71002D1235 /* NEVisualStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NEVisualStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC1D254207D9C71002D1235 /* NEVisualStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NEVisualStatistics.h; sourceTree = "<group>"; };
 		DAC1D255207D9C71002D1235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				DA4CBAE7207F5D7B00A697D5 /* VSMaskView.swift */,
+				DA67BA8820803D0D002FF825 /* UIView+TabBarButton.swift */,
+				DA67BA8A20803E2F002FF825 /* UIView+NavBarButton.swift */,
+				DA67BA8C20803F35002FF825 /* UIView+NavigationButton.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				DA4CBAE6207F5D4F00A697D5 /* Internal */,
+				DA67BA8E20803FAB002FF825 /* UIView+EventID.swift */,
 				DAC1D2BB207DB422002D1235 /* UIView+VisualStatistics.swift */,
 				DA4CBAE2207F533B00A697D5 /* UIViewController+VisualStatistics.swift */,
 			);
@@ -527,8 +539,12 @@
 			files = (
 				DA4CBAE5207F585200A697D5 /* NEVisualStatistics.swift in Sources */,
 				DAC1D2BC207DB422002D1235 /* UIView+VisualStatistics.swift in Sources */,
+				DA67BA8F20803FAB002FF825 /* UIView+EventID.swift in Sources */,
 				DA4CBAE3207F533B00A697D5 /* UIViewController+VisualStatistics.swift in Sources */,
 				DA4CBAE8207F5D7B00A697D5 /* VSMaskView.swift in Sources */,
+				DA67BA8D20803F35002FF825 /* UIView+NavigationButton.swift in Sources */,
+				DA67BA8B20803E2F002FF825 /* UIView+NavBarButton.swift in Sources */,
+				DA67BA8920803D0D002FF825 /* UIView+TabBarButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
