@@ -32,7 +32,7 @@ class VSMaskView: UIView {
     
     // MARK: private
     @objc private func btnAction(_ sender: UIButton) -> Void {
-        guard let identifier = superview?.accessibilityIdentifier else {
+        guard let identifier = superview?.eventID else {
             return
         }
         

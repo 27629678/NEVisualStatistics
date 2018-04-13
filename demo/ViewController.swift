@@ -31,9 +31,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "string")
         
-        if let bar = tabBarController?.tabBar {
-            bar.accessibilityLabel = "first_tab_bar"
-            bar.accessibilityIdentifier = "tab_bar_01"
+        if let item = tabBarController?.tabBarItem {
+            item.accessibilityLabel = "first_tab_bar"
+            item.accessibilityIdentifier = "tab_bar_01"
         }
     }
     

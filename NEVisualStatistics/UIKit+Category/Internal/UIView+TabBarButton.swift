@@ -11,9 +11,24 @@ extension UIView {
         get {
             guard let actions: [Any] = value(forKey: "targetActions") as? [Any] else { return "" }
             guard let action = actions.first as? NSObject else { return "" }
-            guard let target = action.value(forKey: "target") as? UITabBar else { return "" }
+            guard let tabBar = action.value(forKey: "target") as? UITabBar else { return "" }
             
-            return target.accessibilityIdentifier ?? target.accessibilityLabel ?? ""
+            return "com.app.tab_\(allTabBarButtonItems(of: tabBar).index(of: self) ?? -1)"
         }
+    }
+    
+    private func allTabBarButtonItems(of tabBar: UITabBar) -> [UIView] {
+        guard let cls = NSClassFromString("UITabBarButton") else { return [] }
+        
+        var buttons: [UIView] = []
+        for view in tabBar.subviews {
+            if view.isKind(of: cls) {
+                buttons.append(view)
+            }
+        }
+        
+        return buttons.sorted(by: { (lh, rh) -> Bool in
+            return lh.frame.origin.x < rh.frame.origin.x
+        })
     }
 }
