@@ -8,11 +8,10 @@
 
 import Foundation
 
-@objc
-public protocol NEVisualStatisticsDelegate: NSObjectProtocol {
+@objc public protocol NEVisualStatisticsDelegate: NSObjectProtocol {
     func visualStatistics(didReceive event: String?);
     
-    func visualStatistics(clickOnMask view: UIView?, event: String?);
+    @objc optional func visualStatistics(clickOnMask view: UIView?, event: String?);
 }
 
 public class NEVisualStatistics: NSObject {
@@ -36,6 +35,6 @@ public class NEVisualStatistics: NSObject {
     }
     
     class func show(detailWithEvent event: String?, forView view: UIControl?) -> Void {
-        shared.delegate?.visualStatistics(clickOnMask: view!, event: event)
+        shared.delegate?.visualStatistics?(clickOnMask: view!, event: event)
     }
 }

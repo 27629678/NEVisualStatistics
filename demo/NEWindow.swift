@@ -27,7 +27,7 @@ class NEWindow: VSWindow, NEVisualStatisticsDelegate {
         print("event:\(event!) occured")
     }
     
-    func visualStatistics(clickOnMask view: UIView?, event: String?) {
-        print("will show detail view for event:\(event!).")
-    }
+//    func visualStatistics(clickOnMask view: UIView?, event: String?) {
+//        print("will show detail view for event:\(event!).")
+//    }
 }
