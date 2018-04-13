@@ -13,7 +13,6 @@ private var kStatisticsMaskView: Int = 0
 
 extension UIView {
     
-    
     private var statisticsMaskView: UIView? {
         get {
             var mask = objc_getAssociatedObject(self, &kStatisticsMaskView) as? UIView
@@ -59,13 +58,5 @@ extension UIView {
         statisticsMaskView?.snp.makeConstraints({ (maker) in
             maker.edges.equalToSuperview()
         })
-        statisticsMaskView?.backgroundColor = randomBackgroundColor(0.3)
-    }
-    
-    private func randomBackgroundColor(_ alpha: Float) -> UIColor {
-        return UIColor(red: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
-                       green: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
-                       blue: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
-                       alpha: CGFloat(alpha))
     }
 }

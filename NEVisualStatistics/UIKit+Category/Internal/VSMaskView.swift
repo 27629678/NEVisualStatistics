@@ -22,6 +22,8 @@ class VSMaskView: UIView {
         btn.snp.makeConstraints { (maker) in
             maker.edges.equalToSuperview()
         }
+        
+        backgroundColor = randomBackgroundColor(0.3)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,5 +37,12 @@ class VSMaskView: UIView {
         }
         
         print("item-\(identifier) clicked.")
+    }
+    
+    private func randomBackgroundColor(_ alpha: Float) -> UIColor {
+        return UIColor(red: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
+                       green: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
+                       blue: CGFloat((Float(arc4random_uniform(100)) + 100) / 255.0),
+                       alpha: CGFloat(alpha))
     }
 }
