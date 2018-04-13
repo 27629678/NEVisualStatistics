@@ -30,16 +30,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "string")
+        
+        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        btn.setTitle("Disable", for: .normal)
+        btn.setTitleColor(UIColor.blue, for: .normal)
+        btn.addTarget(self, action: #selector(customBtnAction(_:)), for: .touchUpInside)
+        view.addSubview(btn)
+        btn.snp.makeConstraints { (maker) in
+            maker.centerX.equalToSuperview()
+            maker.bottom.equalTo(tableView.snp.top)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        schedule()
-//        NEVisualStatistics.showMaskView()
+        NEVisualStatistics.showMaskView()
     }
     
     // MARK: private
+    @objc private func customBtnAction(_ sender: UIButton?) {
+        NEVisualStatistics.hideMaskView()
+    }
+    
     @objc private func schedule() -> Void {
         index += 1
         if index % 2 == 0 {
