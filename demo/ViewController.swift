@@ -42,6 +42,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NEVisualStatistics.showMaskView()
+    }
+    
     // MARK: private
     @objc private func customBtnAction(_ sender: UIButton?) {
         

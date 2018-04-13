@@ -46,11 +46,7 @@ extension UIControl {
             return
         }
         
-        NotificationCenter
-            .default
-            .post(name: NSNotification.Name(rawValue: kVisualStatisticsDidReceiveEventNotification),
-                  object: sender,
-                  userInfo: ["event": eventID])
+        NEVisualStatistics.receive(eventID, sender: sender)
     }
     
 }

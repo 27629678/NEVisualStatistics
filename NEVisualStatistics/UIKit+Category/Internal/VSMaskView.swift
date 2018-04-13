@@ -11,8 +11,6 @@ import SnapKit
 
 class VSMaskView: UIView {
     
-    private var isVisualStatisticsEnabled: Bool = false
-    
     // MARK: override
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,14 +32,9 @@ class VSMaskView: UIView {
     
     // MARK: private
     @objc private func btnAction(_ sender: UIButton) -> Void {
-        if isVisualStatisticsEnabled {
-            return
-        }
-        
         guard let control = superview as? UIControl else { return }
         
-        isVisualStatisticsEnabled = true
-        control.installStatisticsComponents()
+        NEVisualStatistics.show(detailWithEvent: control.eventID, forView: control)
     }
     
     private func randomBackgroundColor(_ alpha: Float) -> UIColor {

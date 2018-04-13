@@ -9,26 +9,25 @@
 import UIKit
 import NEVisualStatistics
 
-class NEWindow: VSWindow {
+class NEWindow: VSWindow, NEVisualStatisticsDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        NotificationCenter
-            .default
-            .addObserver(self, selector: #selector(visualStatistic(didReceive:)),
-                         name: NSNotification.Name(rawValue: kVisualStatisticsDidReceiveEventNotification), object: nil)
+        NEVisualStatistics.shared.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: private
+    // MARK: delegate
     
-    @objc private func visualStatistic(didReceive notification: NSNotification?) -> Void {
-        guard let event = notification?.userInfo?.first else { return }
-        
-        print("event:\(event.value) occured")
+    func visualStatistics(didReceive event: String?) {
+        print("event:\(event!) occured")
+    }
+    
+    func visualStatistics(clickOnMask view: UIView?, event: String?) {
+        print("will show detail view for event:\(event!).")
     }
 }
