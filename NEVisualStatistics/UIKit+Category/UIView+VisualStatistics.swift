@@ -31,7 +31,7 @@ extension UIView {
             return
         }
         
-        #if DEBUG
+        #if !DEBUG
         print("\(type(of: self)).hidden = \(hidden)")
         #endif
         
